@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+      
+    </h1>
+    <h2 class="text-2xl font-semibold text-gray-300">Stopwatch Application</h2>
+  </div>
+
+  <div class="relative w-64 h-64 sm:w-80 sm:h-80 mb-8">
+    <div class="gradient-circle w-full h-full rounded-full flex items-center justify-center p-2">
+      <div class="inner-circle w-full h-full rounded-full flex items-center justify-center p-1">
+        <div class="w-full h-full bg-gray-900 rounded-full flex flex-col items-center justify-center">
+          <div id="display" class="text-4xl sm:text-5xl font-mono font-bold mb-2">00:00:00</div>
+          <div class="text-sm text-gray-400">HH:MM:SS</div>
+        </div>
+      </div>
+    </div>
+
+    <button id="startBtn" class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+      <i class="fas fa-play"></i>
+    </button>
+    <button id="pauseBtn" class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hidden">
+      <i class="fas fa-pause"></i>
+    </button>
+    <button id="resetBtn" class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hidden">
+      <i class="fas fa-undo"></i>
+    </button>
+    <button id="lapBtn" class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hidden">
+      <i class="fas fa-flag"></i>
+    </button>
+  </div>
+
+  <div class="w-full max-w-md bg-gray-800 rounded-lg p-4 shadow-xl">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-semibold text-gray-300">Lap Times</h3>
+      <span id="lapCount" class="bg-gray-700 text-sm px-3 py-1 rounded-full">0 laps</span>
+    </div>
+    <div id="lapList" class="max-h-64 overflow-y-auto space-y-2">
+      <div class="text-center text-gray-500 py-4">No lap times recorded yet</div>
+    </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
