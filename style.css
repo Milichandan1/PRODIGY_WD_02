@@ -1,0 +1,64 @@
+.gradient-circle {
+  background: conic-gradient(
+    from 0deg,
+    #3b82f6 0%,
+    #8b5cf6 25%,
+    #ec4899 50%,
+    #f43f5e 75%,
+    #f59e0b 100%
+  );
+  animation: rotate 4s linear infinite;
+  background-size: 200% 200%;
+}
+
+.inner-circle {
+  background: conic-gradient(
+    from 180deg,
+    #3b82f6 0%,
+    #8b5cf6 25%,
+    #ec4899 50%,
+    #f43f5e 75%,
+    #f59e0b 100%
+  );
+  background-size: 200% 200%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    background-position: 0% 50%;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-position: 100% 50%;
+  }
+}
+
+.lap-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
